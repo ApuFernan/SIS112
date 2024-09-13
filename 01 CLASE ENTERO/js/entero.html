@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipular Entero</title>
+    <!-- Enlace a la librería Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a tu archivo CSS personalizado -->
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Manipular Entero</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="numeroInput">Introduce un número entero:</label>
+                    <input type="number" id="numeroInput" class="form-control" placeholder="Número entero">
+                </div>
+                <div class="btn-group d-flex justify-content-between">
+                    <button class="btn btn-primary" onclick="cargarNum()">CARGAR NUM ENTERO</button>
+                    <br>
+                    <button class="btn btn-secondary" onclick="mostrarNum()">MOSTRAR ENTERO</button>
+                    <br>
+                    <button class="btn btn-danger" onclick="esParImparNum()">ES PAR O IMPAR</button>
+                    <br>
+                    <button class="btn btn-danger" onclick="esPositivoNegativoNum()">ES POSITIVO O NEGATIVO</button>
+                    <br>
+                    <button class="btn btn-success" onclick="incrementarValor()">(+)</button>
+                    <button class="btn btn-danger" onclick="decrementarValor()">(-)</button>
+                    <br>
+                    <div class="mt-4">
+                    <h3>Resultado:</h3>
+                    <div id="resultado" class="lead"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlace a la librería Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Enlace a tu archivo JS -->
+    <script src="entero.js"></script>
+</body>
+</html>
