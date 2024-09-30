@@ -3,6 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase entero</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .calculator {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            font-size: 18px;
+            width: 80%;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button.suma { background-color: #4CAF50; color: white; }
+        button.resta { background-color: #FF5722; color: white; }
+        button.multiplicacion { background-color: #FFC107; color: white; }
+        button.division { background-color: #2196F3; color: white; }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 22px;
+            color: #333;
+        }
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interfaz de Número Entero</title>
     <!-- Incluir Bootstrap CSS desde un CDN -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -31,13 +92,20 @@
                 <br>
                 <button class="btn btn-secondary btn-custom" onclick="mostrarNum()">MOSTRAR ENTERO</button>
                 <br>
-
-                <button class="btn btn-success btn-custom" onclick="incrementarValor()">(+)</button>
-                <button class="btn btn-danger btn-custom" onclick="decrementarValor()">(-)</button>
+                
+                <button class="btn btn-success btn-custom" onclick="IncrementarValor()">(+)</button>
+                <button class="btn btn-danger btn-custom" onclick="DecrementarValor()">(-)</button>
                 <br>
-                <button class="btn btn-secondary btn-custom" onclick="esParImparNum()">ES PAR IMPAR</button>
+                <button class="btn btn-secondary btn-custom" onclick="esParImparNum()">Es par o impar</button>
                 <br>
-
+                <button class="btn btn-secondary btn-custom" onclick=" esPositivoNegativoNum()">Positivo o Negativo</button>
+                <br>
+                <button class="btn btn-secondary btn-custom" onclick=" esPerfectoNum()">¿Perfecto?</button>
+                <br>
+                <button class="btn btn-secondary btn-custom" onclick="factorialNum()">Factorial</button>
+                <br>
+                <button class="btn btn-secondary btn-custom" onclick="fibonacciNum()">Generar serie de Fibonacci</button>
+                <br>
                 <h3>RESULTADO</h3>
                 <div id="resultado" class="mt-3"></div>
             </div>
