@@ -60,6 +60,30 @@ console.log(c);
 var cCant = c.length
 console.log(cCant);
 
+var mayor = 0;
+var posicion = -1;
+if (aCant > mayor)
+{
+    mayor = aCant;
+    posicion = 0;
+}
+
+if (bCant > mayor)
+{
+     mayor = bCant;
+      posicion = 1;
+}
+
+if (bCant > mayor)
+{
+    mayor = bCant;
+    posicion = 2;
+}
+
+console.log('La mayor cantidad de caracteres tiene: ' + mayor);
+console.log('La cadena con mayor cantidad de caracteres tiene: ' + listaCadenas.lista[posicion]);
+
+
 
 console.log(listaCadenas.lista); // Imprime: ['Hola', 'Mundo', 'UCB']
 
