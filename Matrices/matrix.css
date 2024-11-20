@@ -3,14 +3,14 @@ html, body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif; /* Fuente moderna y elegante */
     overflow: hidden;
 }
 
 /* Estilo del cuerpo y fondo */
 body {
-    background-color: #20232a;
-    color: white;
+    background: linear-gradient(135deg, #1c1c1c, #2a2a2a); /* Gradiente sutil en el fondo */
+    color: #f5f5f5; /* Texto en blanco suave */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,76 +19,65 @@ body {
 
 /* Contenedor principal */
 .main-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Tres columnas: botones izquierda, display, botones derecha */
     align-items: center;
-    gap: 20px; /* Espacio entre el canvas y los botones */
+    gap: 40px; /* Espacio amplio entre columnas */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* Sombra elegante */
 }
 
-/* Estilos para el contenedor de botones */
-.button-container {
+/* Contenedor de botones a la izquierda */
+.left-buttons,
+.right-buttons {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Espacio entre cada botón */
+    gap: 15px; /* Espacio entre los botones */
 }
 
 /* Estilos para los botones */
 button {
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(45deg, rgb(166, 174, 11), rgb(45, 13, 87)); /* Gradiente animado */
-    border: 3px solid transparent; /* Borde transparente inicialmente */
-    border-radius: 5px;
+    padding: 14px 30px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff; /* Texto blanco */
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradiente moderno */
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background-size: 400% 400%;
-    animation: gradientAnimation 4s ease infinite; /* Animación del fondo */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
 }
 
-/* Animación del fondo de los botones */
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* Efecto de hover: aumenta el tamaño, mantiene la animación, eleva y anima el borde */
+/* Efecto de hover para los botones */
 button:hover {
-    transform: scale(1.1) translateY(-5px); /* Hace el botón más grande y lo eleva */
-    background: linear-gradient(45deg, rgb(253,45,85), rgb(34,193,195)); /* Cambio de color en el hover */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
-    border: 3px solid rgb(253,45,85); /* Borde animado con el color del hover */
-    animation: gradientAnimation 4s ease infinite; /* Mantiene la animación de fondo */
+    transform: translateY(-5px); /* Movimiento hacia arriba */
+    background: linear-gradient(45deg, #ff6a00, #ee0979); /* Gradiente en hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Sombra más intensa */
 }
 
 /* Efecto de click */
 button:active {
-    background-color: #1a85c2;
-    transform: scale(1.05) translateY(2px); /* Efecto de presionar el botón */
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Sombra más ligera */
-    border: 3px solid #1a85c2; /* Borde al presionar el botón */
+    transform: scale(0.95); /* Efecto de reducción al hacer clic */
+    background: #34495e; /* Color sólido temporal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más ligera */
 }
 
 /* Estilo del canvas */
 canvas {
-    border: 5px solid transparent;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border: 3px solid #6a11cb; /* Borde en color del gradiente */
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px rgba(106, 17, 203, 0.7); /* Sombra brillante */
     max-width: 90vw;
     max-height: 90vh;
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
     transition: all 0.3s ease; /* Transición suave */
 }
 
 /* Animación del borde del canvas */
 canvas:hover {
-    border: 5px solid rgb(253,45,85); /* Cambio de color del borde al pasar el cursor */
-    box-shadow: 0px 0px 20px rgb(253,45,85); /* Sombra más pronunciada */
+    border: 3px solid #2575fc; /* Cambio de color del borde al pasar el cursor */
+    box-shadow: 0px 0px 40px rgba(37, 117, 252, 0.7); /* Sombra animada */
 }

@@ -8,40 +8,40 @@
 </head>
 <body>
     <div class="main-container">
-        <canvas id="matrixCanvas" width="500" height="500"></canvas>
-        <div class="button-container">
-            <button onclick="matriz.CuadradoRelleno()">Cuadrado rellenado con 1</button>
-            <button onclick="matriz.MarcoInterno()">Patrón de Bordes</button>
-            <button onclick="matriz.Cruces()">Cruz</button>
-            <button onclick="matriz.BordesYDiagonales()">Patrón de Bordes y diagonal inversa</button>
-            <button onclick="matriz.Bandera()">Bandera de mi Tricolor</button>
-            <button onclick="matriz.RellenoAlterno()">Relleno Alterno entre 0 y 1</button>
-            <button onclick="matriz.Diagonal()">Diagonal</button>
-            <button onclick="matriz.RellenoEspiral()">Relleno en forma de espiral</button>
-            <button onclick="matriz.TrianguloSupIzq()">Triangulo Superior Izquierdo</button>
-            <button onclick="matriz.TrianguloInfDer()">Triangulo Inferior Derecho</button>
-            <button onclick="matriz.Cuadricula()">Cuadricula</button>
-        </div>    
-
-        <div class="button-container">
-            <button onclick="matriz.TrianguloCentral()">Triangulo en el medio</button>
-            <button onclick="matriz.RombosConcentricos()">Rombos Concentricos</button>
-            <button onclick="matriz.CrucesConcentricas()">Cruces Concentricas (Falta)</button>
-            <button onclick="matriz.BanderaDeNepal()">Bandera de Nepal</button>
-            <button onclick="matriz.CuadradoDentroCuadrado()">Cuadrado Dentro De Cuadrado</button>
-            <button onclick="matriz.BordesYCentros()">Bordes y Centros</button>
-            <button onclick="matriz.LineasParalelas()">Lineas Paralelas</button>
-            <button onclick="matriz.MarcasDeCruz()">Marcas de Cruz</button>
-            <button onclick="matriz.RomboDeEsquinas()">Rombo en Esquinas (Mal)</button>
-            <button onclick="matriz.RellenoDeAjedrez()">Relleno De Ajedrez</button>
-            <button onclick="matriz.RelojDeArena()">Reloj De Arena</button>
-
-        
+        <!-- Botones a la izquierda -->
+        <div class="left-buttons">
+            <button onclick="matriz.CuadradoRelleno()">Llenar Cuadrado</button>
+            <button onclick="matriz.MarcoInterno()">Bordes Internos</button>
+            <button onclick="matriz.Cruces()">Forma de Cruz</button>
+            <button onclick="matriz.BordesYDiagonales()">Bordes y Diagonal</button>
+            <button onclick="matriz.Bandera()">Tricolor Bandera</button>
+            <button onclick="matriz.RellenoAlterno()">Relleno Alternado</button>
+            <button onclick="matriz.Diagonal()">Dibujar Diagonal</button>
+            <button onclick="matriz.RellenoEspiral()">Relleno Espiralado</button>
+            <button onclick="matriz.TrianguloSupIzq()">Triángulo Superior Izq.</button>
+            <button onclick="matriz.TrianguloInfDer()">Triángulo Inferior Der.</button>
+            <button onclick="matriz.Cuadricula()">Crear Cuadrícula</button>
         </div>
 
+        <!-- Canvas en el centro -->
+        <canvas id="matrixCanvas" width="500" height="500"></canvas>
+
+        <!-- Botones a la derecha -->
+        <div class="right-buttons">
+            <button onclick="matriz.TrianguloCentral()">Triángulo Central</button>
+            <button onclick="matriz.RombosConcentricos()">Rombos en Capas</button>
+            <button onclick="matriz.CrucesConcentricas()">Cruces en Capas</button>
+            <button onclick="matriz.BanderaDeNepal()">Bandera Nepal</button>
+            <button onclick="matriz.CuadradoDentroCuadrado()">Cuadrados Concéntricos</button>
+            <button onclick="matriz.BordesYCentros()">Centro y Bordes</button>
+            <button onclick="matriz.LineasParalelas()">Líneas Paralelas</button>
+            <button onclick="matriz.MarcasDeCruz()">Cruz en Centro</button>
+            <button onclick="matriz.RomboDeEsquinas()">Rombo en Esquinas</button>
+            <button onclick="matriz.RellenoDeAjedrez()">Patrón Ajedrez</button>
+            <button onclick="matriz.RelojDeArena()">Patrón Reloj Arena</button>
         </div>
     </div>
-    
+
     <!-- Scripts de JavaScript -->
     <script src="matrix.js"></script>
     <script src="main.js"></script>
